@@ -123,6 +123,16 @@ main {
   font-size: 3.5rem;
 }
 
+.special{
+  position: relative;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;  
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+
 /* ABSOLUTE POSITIONED ELEMENTS */
 .btn {
   position: absolute;
