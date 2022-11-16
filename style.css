@@ -131,6 +131,7 @@ main {
   letter-spacing: 1px;  
   font-weight: 100;
   margin-bottom: 1rem;
+  color: #ddd;
 }
 
 /* ABSOLUTE POSITIONED ELEMENTS */
