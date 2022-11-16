@@ -125,8 +125,8 @@ main {
 
 .special{
   position: relative;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 1.2rem;
+  font-family:'Nunito', sans-serif;
+  font-size: 1.3rem;
   text-transform: uppercase;
   letter-spacing: 1px;  
   font-weight: 100;
