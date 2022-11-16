@@ -17,8 +17,10 @@ const scores = [0,0];
 diceEl.classList.add('hidden');
 let activePlayer = 0;
 let  currentScore = 0;
+let playing = true;
 
 add.addEventListener('click',function(){
+    if(playing === true){
     const num = Math.trunc(Math.random()*6)+1;
     console.log(num);
     diceEl.classList.remove('hidden');
@@ -36,15 +38,18 @@ add.addEventListener('click',function(){
         element1.classList.toggle('player--active');
 
     }
+ }
 })
 
 elementHold.addEventListener('click',function(){
+    if(playing === true){
     scores[activePlayer] += currentScore; 
     document.querySelector(`#score--${activePlayer}`).textContent = scores[activePlayer];
     if(scores[activePlayer] >= 50){
         document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
         document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
         document.querySelector(`.wins--${activePlayer}`).style.display = 'block';
+        playing = false;
         
     }
     document.querySelector(`#current--${activePlayer}`).textContent = 0;
@@ -52,12 +57,11 @@ elementHold.addEventListener('click',function(){
     activePlayer = activePlayer === 0 ? 1: 0;
     element0.classList.toggle('player--active');
     element1.classList.toggle('player--active');
+ }
 })
 
 
 newGame.addEventListener('click',function(){
-    document.querySelector(`.player--${activePlayer}`).classList.remove('player--winner');
-    document.querySelector(`.player--${activePlayer}`).classList.add('player--active');
     document.querySelector(`.wins--${activePlayer}`).style.display = 'none';
     document.querySelector(`#score--0`).textContent = 0;
     document.querySelector(`#score--1`).textContent = 0;
@@ -69,6 +73,11 @@ newGame.addEventListener('click',function(){
     scores[1] = 0;
     currentScore = 0;
     activePlayer = 0;
+     element0.classList.remove('player--winner');
+    element1.classList.remove('player--winner');
+    element0.classList.add('player--active');
+    element1.classList.remove('player--active');
+    playing = true
 })
 
 
