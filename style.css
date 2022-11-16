@@ -131,7 +131,7 @@ main {
   letter-spacing: 1px;  
   font-weight: 100;
   margin-bottom: 1rem;
-  color: #ddd;
+  color: rgb(250, 246, 248);
 }
 
 /* ABSOLUTE POSITIONED ELEMENTS */
